@@ -123,7 +123,6 @@ def get_qrcode():
     image_name = u"cha." + cha_page.headers['content-type'].split("/")[1]
     with open(image_name, 'wb') as f:
         f.write(cha_page.content)
-        f.close()
     return image_name, qrcode_qrid
 
 

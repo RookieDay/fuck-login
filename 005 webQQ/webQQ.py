@@ -41,7 +41,6 @@ def showQRImage():
     # print(type(reponse))  >>> <class 'requests.models.Response'>
     with open(QRImgPath, 'wb') as f :
         f.write(reponse.content)
-        f.close()
 
     if sys.platform.find('darwin') >= 0:
         subprocess.call(['open', QRImgPath])

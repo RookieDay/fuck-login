@@ -82,7 +82,6 @@ def showQRImage():
 
     with open(QRImgPath, 'wb') as f:
         f.write(response.content)
-        f.close()
 
     if sys.platform.find('darwin') >= 0:
         subprocess.call(['open', QRImgPath])

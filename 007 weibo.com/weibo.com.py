@@ -96,7 +96,6 @@ def get_cha(pcid):
     cha_page = session.get(cha_url, headers=headers)
     with open("cha.jpg", 'wb') as f:
         f.write(cha_page.content)
-        f.close()
     try:
         im = Image.open("cha.jpg")
         im.show()

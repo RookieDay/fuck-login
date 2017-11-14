@@ -44,7 +44,6 @@ captchaurl = 'https://www.zhihu.com/captcha.gif?r='+\
 captcharesponse = session.get(url=captchaurl, headers=headers)
 with open('checkcode.gif', 'wb') as f:
     f.write(captcharesponse.content)
-    f.close()
 # os.startfile('checkcode.gif')
 captcha = input('请输入验证码：')
 print(captcha)

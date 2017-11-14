@@ -89,7 +89,6 @@ def login_pre(username):
             capt_base64 = capt_json['data']['image'].split("base64,")[1]
             with open('capt.jpg', 'wb') as f:
                 f.write(base64.b64decode(capt_base64))
-                f.close()
             im = Image.open("capt.jpg")
             im.show()
             im.close()
